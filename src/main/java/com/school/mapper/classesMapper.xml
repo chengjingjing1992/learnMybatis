@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.school.mapper.ClassesRepository">
+
+    <resultMap id="classesMap" type="com.school.entity.Classes">
+        <id property="id" column="cid"></id>
+        <result property="classesName" column="classname"></result>
+        <collection property="students" ofType="com.school.entity.Student">
+            <id property="id" column="sid"></id>
+            <result property="name" column="sname"></result>
+            <result property="age" column="sage"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getClassesById" parameterType="int" resultMap="classesMap">
+        select a.id as sid  ,a.name as  sname ,a.age as  sage ,b.classesName as  classname ,b.id as cid from school.student a ,school.classes b  where a.classesid= b.id
+and b.id=#{classId};
+    </select>
+</mapper>
