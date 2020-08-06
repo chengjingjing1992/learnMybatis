@@ -7,6 +7,8 @@ package com.school.test;
 public class Test {
 
     int num;
+
+
     public void show(){
 
         System.out.println(num);
