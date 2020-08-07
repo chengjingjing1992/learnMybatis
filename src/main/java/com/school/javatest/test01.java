@@ -20,6 +20,7 @@ public class test01 {
         map.put(4,"zhaoliu");
 
         System.out.println(map.keySet());
+        System.out.println("22222");
     }
     @Test void test0002(){
 
