@@ -10,7 +10,6 @@ cl * @author chengjinging
  * @date 2020/8/7 下午8:54
  */
 public class test01 {
-
     @Test
     public void test0001(){
         Map map=new TreeMap();
@@ -18,7 +17,7 @@ public class test01 {
         map.put(2,"lisi");
         map.put(3,"wangzulan");
         map.put(4,"zhaoliu");
-
+        System.out.println("222");
         System.out.println(map.keySet());
     }
     @Test void test0002(){
