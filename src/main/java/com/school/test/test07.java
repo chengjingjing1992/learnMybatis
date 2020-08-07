@@ -16,8 +16,14 @@ public class test07 {
         System.out.println("3333");
     }
 
-    public void test05(){
+
+    public void test05() {
         System.out.println("this is add from branch jing_1");
+    }
+    public void test04(){
+        System.out.printf(" add in branch jing2");
+
+
     }
 
 }
