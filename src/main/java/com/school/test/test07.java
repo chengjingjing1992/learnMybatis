@@ -12,5 +12,8 @@ public class test07 {
     public void test02(){
         System.out.println("22222");
     }
+    public void test03(){
+        System.out.println("3333");
+    }
 
 }
