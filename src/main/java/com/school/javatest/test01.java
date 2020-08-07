@@ -19,6 +19,10 @@ public class test01 {
         map.put(4,"zhaoliu");
         System.out.println("222");
         System.out.println(map.keySet());
+
+
+        System.out.println("444");
+
     }
     @Test void test0002(){
 
