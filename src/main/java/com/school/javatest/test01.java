@@ -21,4 +21,7 @@ public class test01 {
 
         System.out.println(map.keySet());
     }
+    @Test void test0002(){
+
+    }
 }
