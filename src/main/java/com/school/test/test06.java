@@ -53,6 +53,7 @@ public class test06 {
              ) {
             System.out.println(g.getId() + " " + g.getGoodsName() );
         }
+        
 
 
 
