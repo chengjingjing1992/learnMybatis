@@ -1,5 +1,7 @@
 package com.school.abThread;
 
+import org.junit.Test;
+
 /**
  * @author chengjinging
  * @date 2020/8/8 下午8:41
@@ -40,7 +42,7 @@ public class EatThread  extends Thread{
             }
         }
         /**
-         * 只调用run() 方法，没有开辟新的栈空间，是单线程执行，几个run()方法按照顺序依次执行输出
+         * 只调用run() 方法，没有开辟新的栈空间，是单线程执行，几个run()方法按照顺序依次执行输出 且 当前线程都是：main
          */
         Thread threadEat=new EatThread("吃饭线程");
         threadEat.run();
@@ -53,17 +55,5 @@ public class EatThread  extends Thread{
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }
