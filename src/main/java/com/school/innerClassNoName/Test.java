@@ -42,4 +42,17 @@ public class Test {
         introdudeEnglish.introduce("Joe");
 
     }
+
+    @org.junit.Test
+    public void test03(){
+        /**
+         * 使用匿名内部类同时使用匿名对象
+         */
+        new Introdude(){
+
+            public void introduce(String name) {
+                System.out.println("我的名字叫："+ name);
+            }
+        }.introduce("赵刘");
+    }
 }
