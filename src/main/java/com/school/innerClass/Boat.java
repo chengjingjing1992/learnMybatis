@@ -9,7 +9,7 @@ import javax.crypto.spec.PSource;
  * @author chengjinging
  * @date 2020/8/9 上午10:31
  *
- * 局部内部类期望访问所在方法的局部变量
+ * 局部内部类期望访问所在方法的局部变量, 局部变量必须是事实 final 的
  */
 public class Boat {
 

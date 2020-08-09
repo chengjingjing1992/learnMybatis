@@ -3,6 +3,8 @@ package com.school.innerClass;
 /**
  * @author chengjinging
  * @date 2020/8/9 上午9:30
+ *
+ * 内部类 外部类 变量名称相同
  */
 public class Body {
 

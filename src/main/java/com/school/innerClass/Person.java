@@ -3,6 +3,8 @@ package com.school.innerClass;
 /**
  * @author chengjinging
  * @date 2020/8/9 上午8:01
+ *
+ * 如何使用成员内部类
  */
 public class Person {
 
