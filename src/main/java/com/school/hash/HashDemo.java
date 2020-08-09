@@ -17,5 +17,11 @@ public class HashDemo  extends Object{
          * 继承 Object 类 从而获得hashCode() 得到 哈希值
          */
         System.out.println(hashDemo.hashCode());
+        String s1=new String("abc");
+        String s2=new String("abc");
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+
+
     }
 }
