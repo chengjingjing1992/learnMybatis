@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.school"></context:component-scan>
+
+<!--    通过构造函数初始化Bean-->
+<!--    <bean id="AccountService" class="com.school.springdemo.AccountService" scope="singleton"></bean>-->
+
+
+<!--    使用某个类中的方法创建对象-->
+     <bean id="FactoryInstance" class="com.school.springdemo.FactoryInstance"></bean>
+    <bean id="AccountService" factory-bean="FactoryInstance" factory-method="getAAccountService"></bean>
+    <bean id="AccountServiceStatic" class="com.school.springdemo.FactoryInstance" factory-method="getAcctSerice"></bean>
+
+
+    <bean id="BankService" class="com.school.springdemo.BankServiceImpl">
+        <property name="bankNo" value="1"/>
+        <property name="bankName" value="bankName"/>
+        <property name="date" ref="time"></property>
+
+    </bean>
+
+    <bean id="time" class="java.util.Date"></bean>
+
+
+    <bean name="BankServiceImplBeijing" class="com.school.springdemo.BankServiceImplBeijing">
+        <property name="list">
+            <list>
+                <value>小莫</value>
+                <value>小李</value>
+                <value>王凯</value>
+            </list>
+        </property>
+        <property name="set">
+            <list>
+                <value>zhangsan</value>
+                <value>zhangsan</value>
+                <value>zhangsan</value>
+                <value>lisi</value>
+                <value>wangwu</value>
+            </list>
+
+        </property>
+    </bean>
+
+
+</beans>
