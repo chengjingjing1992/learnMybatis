@@ -18,5 +18,8 @@ public class Demo3 {
 
 //        list.forEach();
 //        Consumer
+
+//        System.out.println(String.format("【向数据库中插入数据】name：%s，pwd：%s", "cjj", 12));
+
     }
 }
