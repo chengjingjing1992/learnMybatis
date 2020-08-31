@@ -8,5 +8,7 @@ public class Demo1 {
 
     public static void main(String[] args) {
         System.out.println(StaticDemo.INIT);
+        System.out.println("from master.....");
+        System.out.println("from jing_6...");
     }
 }
