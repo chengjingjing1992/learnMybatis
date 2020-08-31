@@ -10,5 +10,7 @@ public class Demo1 {
         System.out.println(StaticDemo.INIT);
         System.out.println("from master.....");
         System.out.println("from jing_6...");
+        System.out.println("master master...");
+
     }
 }
