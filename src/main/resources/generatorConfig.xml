@@ -18,8 +18,10 @@ useUnicode=true&amp;characterEncoding=UTF-8"
         <javaClientGenerator type="XMLMAPPER"
                              targetPackage="com.school.mapper" targetProject="./src/main/java">
         </javaClientGenerator>
-        <table tableName="customer" domainObjectName="Customer"></table>
-        <table tableName="goods" domainObjectName="Goods"></table>
+<!--        <table tableName="customer" domainObjectName="Customer"></table>-->
+<!--        <table tableName="goods" domainObjectName="Goods"></table>-->
+<!--        <table tableName="employee" domainObjectName="Employee"></table>-->
+        <table tableName="Department" domainObjectName=""></table>
 
     </context>
 </generatorConfiguration>

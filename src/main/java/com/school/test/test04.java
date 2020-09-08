@@ -26,7 +26,7 @@ public class test04 {
 
         SqlSession sqlSession = sqlSessionFactory.openSession();
         StudentRepository atudentRepository=sqlSession.getMapper(StudentRepository.class);
-        List<Object> students= atudentRepository.getClassesAndStudnet(2);
+        List<Object> students= atudentRepository.getClassesAndStudnet(1);
         for (Object c:students
              ) {
             Student s=(Student)c;
