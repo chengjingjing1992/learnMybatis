@@ -33,5 +33,9 @@
     select   a.id as id ,a.name as name,b.id as deptno, b.name as dname
 from school.employee a ,school.department b where   a.dept_id=b.id and b.id=${deptid};
   </select>
+
+  <select id="findEmloyeesAndDeptsAll" resultType="map">
+
+  </select>
   
 </mapper>

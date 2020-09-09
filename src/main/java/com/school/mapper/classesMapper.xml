@@ -17,4 +17,8 @@
         select a.id as sid  ,a.name as  sname ,a.age as  sage ,b.classesName as  classname ,b.id as cid from school.student a ,school.classes b  where a.classesid= b.id
 and b.id=#{classId};
     </select>
+    <select id="getClassById" parameterType="int" resultType="com.school.entity.Classes">
+        select * from classes where id = ${id}
+    </select>
+
 </mapper>

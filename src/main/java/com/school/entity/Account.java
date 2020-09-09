@@ -8,12 +8,14 @@ public class Account {
     private String username;
     private String password;
     private int age;
+    private int balance;
 
-    public Account(long id, String username, String password, int age) {
+    public Account(long id, String username, String password, int age ,int balance) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.age = age;
+        this.balance=balance;
     }
 
     public Account() {
@@ -52,6 +54,14 @@ public class Account {
         this.age = age;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
@@ -59,6 +69,7 @@ public class Account {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", age=" + age +
+                ", balance=" + balance +
                 '}';
     }
 }

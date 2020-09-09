@@ -23,7 +23,7 @@ public class test09 extends BaseAction{
         DepartmentMapper departmentMapper= session.getMapper(DepartmentMapper.class);
         Department department=departmentMapper.findById(1);
         System.out.println(department.toString());
-//
+
         EmployeeMapper employeeMapper=session.getMapper(EmployeeMapper.class);
         Employee employee=employeeMapper.findById(1);
         System.out.println(employee.toString());
@@ -48,15 +48,6 @@ public class test09 extends BaseAction{
              ) {
             System.out.println(o.toString());
         }
-
-
-
-
-
-
-
-
-
 
         session.commit();
         session.close();

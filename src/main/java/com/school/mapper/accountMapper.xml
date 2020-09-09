@@ -13,4 +13,104 @@
         select
         * from account where age > #{age}
     </select>
+    
+    <select id="findAccount" parameterType="com.school.entity.Account" resultType="com.school.entity.Account">
+        select * from account
+        <where>
+            <if test="account.username != null">
+                username=#{account.username}
+            </if>
+            <if test="account.age != null">
+                and age=#{account.age}
+            </if>
+            <if test="account.balance != 0">
+                and balance=#{account.balance}
+            </if>
+        </where>
+    </select>
+
+    <select id="findAccount2" parameterType="com.school.entity.Account" resultType="com.school.entity.Account">
+        select * from account
+        <where>
+            <choose>
+                <when test="account.id != null">
+                    id=#{account.id}
+                </when>
+                <when test="account.username != null">
+                    username=#{account.username}
+                </when>
+                <when test="account.age != null">
+                    age=#{account.age}
+                </when>
+                <when test="account.balance != 0">
+                    balance=#{account.balance}
+                </when>
+            </choose>
+        </where>
+    </select>
+
+    <select id="findAccount3" parameterType="com.school.entity.Account" resultType="com.school.entity.Account">
+        select * from account
+        <trim prefix="where" prefixOverrides="and">
+            <if test="account.id != null">
+                and id=#{account.id}
+            </if>
+            <if test="account.username != null">
+                username=#{account.username}
+            </if>
+            <if test="account.age != 0">
+                and age=#{account.age}
+            </if>
+            <if test="account.balance != 0">
+                and balance=#{account.balance}
+            </if>
+        </trim>
+    </select>
+
+    <update id="accountUpdate" parameterType="com.school.entity.Account">
+        update account
+        <set>
+            <if test="account.username != null">
+                username=#{account.username},
+            </if>
+            <if test="account.age != null and account.age != 0">
+                 age=#{account.age},
+            </if>
+            <if test="account.balance != null">
+                 balance=#{account.balance},
+            </if>
+        </set>
+        <where>
+            id = #{account.id}
+        </where>
+
+    </update>
+
+    <update id="accountUpdate2" parameterType="com.school.entity.Account">
+        update account
+        <set>
+            <if test="account.age != null and account.age != 0">
+                age=#{account.age},
+            </if>
+            <if test="account.balance != null">
+                balance=#{account.balance},
+            </if>
+        </set>
+        <where>
+            username = #{account.username}
+        </where>
+
+    </update>
+
+    <select id="findAccountsByIds" parameterType="java.util.List" resultType="com.school.entity.Account">
+        select * from account
+        where
+        <foreach collection="ids" open="id in (" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+
+
+
 </mapper>
