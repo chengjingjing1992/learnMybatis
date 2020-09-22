@@ -33,9 +33,7 @@ public class UiClass1 {
         Date date=bankService.getDate();
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time=sdf.format(date);
-        System.out.println(time);
-        Date date1=sdf.parse(time);
-        System.out.println(date1.toString());
+
 
         List list=bankService.getList();
         if(list!=null){

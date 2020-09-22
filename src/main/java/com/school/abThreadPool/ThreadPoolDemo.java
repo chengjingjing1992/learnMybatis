@@ -32,7 +32,6 @@ public class ThreadPoolDemo {
             @Override
             public void run() {
 
-
                 try {
                     System.out.println(Thread.currentThread().getName()+"开始执行2任务");
                     Thread.sleep(10000);
